@@ -1,0 +1,55 @@
+header {
+  position: relative;
+
+  width: 100%;
+  padding: 2rem 2rem 2.5rem 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 26px;
+  }
+
+  nav {
+    position: absolute;
+    display: inline;
+    margin: 0 auto;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0 13px 0 $grayishBlue;
+    margin: 5rem 2rem 0 2rem;
+    right: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+
+    p {
+      padding: 1rem;
+      transition: all 0.2s ease-in-out;
+      &:hover{
+          cursor: pointer;
+      }
+      &:active{
+        background-color: $red;
+      }
+    }
+
+    .divider {
+      content: "";
+      height: 1px;
+      margin: 1rem;
+      background-color: $grayishBlue;
+      margin-bottom: 0;
+    }
+
+    .login {
+      color: $grayishBlue;
+      padding: 1.2rem;
+      border-color: $grayishBlue;
+    }
+  }
+}
