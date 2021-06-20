@@ -6,6 +6,21 @@ article {
   margin-top: 4rem;
   text-align: left;
   text-transform: uppercase;
+  padding-left: 1rem;
+}
+
+@media screen and (min-width: 64rem) {
+  article {
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  article {
+    margin: unset;
+    padding: 5rem;
+    width: 50%;
+  }
 }
 
 article .box {
@@ -34,6 +49,12 @@ article h1 {
   font-size: 2.5rem;
 }
 
+@media screen and (min-width: 64rem) {
+  article h1 {
+    font-size: 3.5rem;
+  }
+}
+
 article p {
   margin-top: 1rem;
   font-size: 1.2rem;
@@ -52,6 +73,23 @@ article button {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: white;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+article button:hover {
+  cursor: pointer;
+  background-color: lightcoral;
+}
+
+article button:active {
+  background-color: #f50000;
+}
+
+@media screen and (min-width: 40rem) {
+  article button:hover {
+    text-decoration: underline;
+  }
 }
 
 article .bottomPreview {
@@ -74,6 +112,24 @@ header {
           align-items: center;
 }
 
+@media screen and (min-width: 40rem) {
+  header #menuIcon {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  header {
+    padding: 2rem 4rem 2.5rem 5rem;
+  }
+}
+
+@media screen and (min-width: 90rem) {
+  header {
+    padding: 2rem 4rem 2.5rem 5rem;
+  }
+}
+
 header img {
   width: 26px;
 }
@@ -85,6 +141,7 @@ header #menuIcon:hover {
 header nav {
   position: absolute;
   display: inline;
+  visibility: hidden;
   opacity: 0;
   margin: 0 2rem;
   margin-top: 5rem;
@@ -102,27 +159,63 @@ header nav {
   transition: all 0.5s ease-in-out 0s;
 }
 
+@media screen and (min-width: 40rem) {
+  header nav {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: unset;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    font-size: 1rem;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: unset;
+    margin: unset;
+    -webkit-transition: unset;
+    transition: unset;
+    margin-right: 2rem;
+  }
+}
+
 header nav.open {
   visibility: visible;
   opacity: 1;
 }
 
-header nav.open p {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+header nav p {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  padding: 1rem;
 }
 
-header nav.open p:hover {
+header nav p:hover {
   cursor: pointer;
   background-color: lightcoral;
 }
 
-header nav.open p:active {
-  background-color: #ff5c5c;
+header nav p:active {
+  background-color: #f50000;
 }
 
-header nav p {
-  padding: 1rem;
+@media screen and (min-width: 40rem) {
+  header nav p:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  header nav p {
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
 }
 
 header nav .divider {
@@ -133,21 +226,24 @@ header nav .divider {
   margin-bottom: 0;
 }
 
+@media screen and (min-width: 40rem) {
+  header nav .divider {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin: 0 1rem;
+  }
+}
+
 header nav .login {
   color: #a0a1ac;
   padding: 1.2rem;
   border-color: #a0a1ac;
 }
 
-@-webkit-keyframes bg {
-  to {
-    background-color: red;
-  }
-}
-
-@keyframes bg {
-  to {
-    background-color: red;
+@media screen and (min-width: 40rem) {
+  header nav .login {
+    padding: 0.5rem;
   }
 }
 
@@ -183,7 +279,7 @@ body::before {
   top: 0;
   left: 50%;
   right: 0;
-  bottom: 45%;
+  bottom: 50%;
   background-color: #eef3f6;
   border-bottom-left-radius: 3rem;
   z-index: -1;
@@ -204,5 +300,13 @@ body .bgHelper .flex {
 
 body .bgHelper .flex img {
   width: 31rem;
+}
+
+@media screen and (min-width: 64rem) {
+  body .bgHelper .flex img {
+    position: absolute;
+    top: 10rem;
+    width: 55rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
