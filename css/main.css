@@ -84,7 +84,7 @@ header #menuIcon:hover {
 
 header nav {
   position: absolute;
-  display: none;
+  display: inline;
   opacity: 0;
   margin: 0 2rem;
   margin-top: 5rem;
@@ -100,16 +100,10 @@ header nav {
   font-size: 1.2rem;
   -webkit-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s;
-  -webkit-animation: closeMenu 3s forwards;
-          animation: closeMenu 3s forwards;
 }
 
 header nav.open {
-  -webkit-transition: all 0.5s ease-in-out 0s;
-  transition: all 0.5s ease-in-out 0s;
-  -webkit-animation: openMenu 3s forwards;
-          animation: openMenu 3s forwards;
-  display: inline;
+  visibility: visible;
   opacity: 1;
 }
 
@@ -120,6 +114,7 @@ header nav.open p {
 
 header nav.open p:hover {
   cursor: pointer;
+  background-color: lightcoral;
 }
 
 header nav.open p:active {
@@ -142,66 +137,6 @@ header nav .login {
   color: #a0a1ac;
   padding: 1.2rem;
   border-color: #a0a1ac;
-}
-
-@-webkit-keyframes openMenu {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-  1% {
-    display: inline;
-    opacity: 0;
-  }
-  100% {
-    display: inline;
-    opacity: 1;
-  }
-}
-
-@keyframes openMenu {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-  1% {
-    display: inline;
-    opacity: 0;
-  }
-  100% {
-    display: inline;
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes closeMenu {
-  0% {
-    display: inline;
-    opacity: 1;
-  }
-  99% {
-    display: inline;
-    opacity: 0;
-  }
-  100% {
-    display: none;
-    opacity: 0;
-  }
-}
-
-@keyframes closeMenu {
-  0% {
-    display: inline;
-    opacity: 1;
-  }
-  99% {
-    display: inline;
-    opacity: 0;
-  }
-  100% {
-    display: none;
-    opacity: 0;
-  }
 }
 
 @-webkit-keyframes bg {

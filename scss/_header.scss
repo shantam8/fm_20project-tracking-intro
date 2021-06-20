@@ -18,7 +18,7 @@ header {
 
   nav {
     position: absolute;
-    display: none;
+    display: inline;
     opacity: 0;
     margin: 0 2rem;
     margin-top: 5rem;
@@ -31,19 +31,17 @@ header {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 1.2rem;
-    transition:all 0.5s ease-in-out 0s;
-    animation: closeMenu 3s forwards;
+    transition: all 0.5s ease-in-out 0s;
 
     &.open {
-      transition:all 0.5s ease-in-out 0s;
- animation: openMenu 3s forwards;
-     display: inline;
+      visibility: visible;
       opacity: 1;
 
       p {
         transition: all 0.2s ease-in-out;
         &:hover {
           cursor: pointer;
+          background-color: lightcoral;
         }
         &:active {
           background-color: $red;
@@ -70,38 +68,7 @@ header {
   }
 }
 
-@keyframes openMenu {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-  1% {
-    display: inline;
-    opacity: 0;
-  }
 
-  100% {
-    display: inline;
-    opacity: 1;
-  }
-}
-
-@keyframes closeMenu {
-  0% {
-    display: inline;
-    opacity: 1;
-  }
-
-  99% {
-    display: inline;
-    opacity: 0;
-  }
-
-  100% {
-    display: none;
-    opacity: 0;
-  }
-}
 
 @keyframes bg {
   to {
